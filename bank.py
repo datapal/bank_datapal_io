@@ -14,7 +14,7 @@ class BankModel:
     def datapalio_interface(self, **kwargs):
         
         """
-        This method is used by DataPal.io to interact with the model.
+        This is the method used by DataPal.io to interact with the model.
         
         Inputs:
                 
@@ -50,9 +50,13 @@ class BankModel:
         return output_data
         
 
-    def datapalio_interface(self, **kwargs):
-
+    def train_or_predict(self, pipe_id, input_data, input_files_dir, output_files_dir):
         
+        """
+        Handles user requests.
+        
+        """
+            
         if pipe_id in [0,1]:
             # load data
             # if one by one predictions
